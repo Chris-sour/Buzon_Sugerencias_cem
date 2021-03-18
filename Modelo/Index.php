@@ -84,7 +84,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 
-    <title>Buzon de Suegerencias - CEM</title>
+    <title>Control de Gases Medicinales</title>
     <style>
         textarea {
             resize: none;
@@ -150,144 +150,215 @@
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="col-xs-2 hidden-xs"></div>
                 <div class="col-sm-8" style="margin: 1em 0;">
-                    <!-- <div class="col-xs-12 text-center">
-          <img src="img/logo-clinica-apj.svg" width="200px" alt="">
-        </div> -->
                     <div class="col-xs-12">
                         <br>
-                        <img src="../img/Buzondesugerencias.png" width="100%" alt="">
+                        <img src="../img/GasesMedicinales.jpg" width="100%" alt="">
                     </div>
 
+                    <script type="text/javascript">
+                    function multiplicar()
+                        {
+                            var num6=6;
+                            var num7=7;
+                            var num8=8;
+                            var num9=9;
+                            var num10=10;
+                            var num2800=2800; 
+                            var n6=document.getElementById("stock6").value;
+                            document.getElementById("total6").value=(n6*num6);
+                            var n7=document.getElementById("stock7").value;
+                            document.getElementById("total7").value=(n7*num7);  
+                            var n8=document.getElementById("stock8").value;
+                            document.getElementById("total8").value=(n8*num8);
+                            var n9=document.getElementById("stock9").value;
+                            document.getElementById("total9").value=(n9*num9);
+                            var n10=document.getElementById("stock10").value;
+                            document.getElementById("total10").value=(n10*num10);
+                            var n11=document.getElementById("consumo1a").value;
+                            document.getElementById("total1a").value=(num2800-n11);
+                            var n12=document.getElementById("consumo2b").value;
+                            document.getElementById("total2b").value=(num2800-n12);
+                        }
+                    </script>
 
                     <div class="col-xs-12" style="padding-bottom: 1em; border-radius: 0.5em;">
                         <div style="background: #f1f1f1;display: grid;border: 1px solid grey;padding: 0.5em 1em;border-radius: 0.25em;margin: 0 1em; padding-bottom: 1em;">
                             <font face="arial">
-                            <!--<font face="Comic Sans MS,arial,verdana"  Times New Roman   Trasandina Regular>-->
-                       <!--    <label style="margin-top: 0.5em; color: #080808;">
-                            Estimado paciente, por favor bríndenos sus datos y nos comunicaremos con
-                            usted a la brevedad para informarle sobre su Consulta Ambulatoria con la 
-                            especialidad médica que nos indique. </label>
-                        	<br>
-                        	<br>
-							Recuerde que en caso de solicitar una Consulta Ambulatoria Presencial solo 
-                            se permitirá el ingreso al paciente que recibirá la atención médica.  
-                            Únicamente podrán ingresar al consultorio dos personas cuando el paciente 
-                            requiera de asistencia indispensable de un acompañante. Todo paciente y 
-                            personal de salud que ingrese a la clínica debe venir con mascarilla 
-                            quirúrgica (no de tela) y sin guantes. De lo contrario no se le 
-                            permitirá el acceso.</label> -->
 
                             <div class="form-group" style="margin-bottom: 0 !important;">
                                 <div class="col-lg-8 col-xs-12" style="padding: 0.15em .5em;"> <!--col-lg-4 -->
-                                    <label>FECHA DE SUGERENCIA :</label>
+                                    <label>FECHA DE CONTROL :</label>
                                     <input type="date" name="fecha" id="fecha" class="form-control" required="required" autocomplete="off">
                             </div>
                             <div class="col-lg-4 col-xs-12" style="padding: 0.15em .5em;">
-                                    <label>HORA:</label>
+                                    <label>HORA DE CONTROL:</label>
                                     <input type="time" name="hora" id="hora" class="form-control" required="required" autocomplete="off">
                             </div>
                             <br>
-                            <label style="margin-top: 0.5em; color: #1919A3;">DATOS DEL PACIENTE:</label>
+
                         	<br>
                             <div class="col-lg-12 col-xs-12" style="padding: 0.15em .5em;">
-                                    <label>NOMBRES Y APELLIDOS:</label>
+                                    <label>PRESENTACION:</label>
                                     <input type="text" name="nombres" id="nombres" class="form-control" required="required" autocomplete="off">
                             </div>
-                            <div class="col-lg-2 col-xs-12" style="padding: 0.15em .5em;">
-                                    <label>N° DE DNI:</label>
-                                    <input type="text" name="n_dni" id="n_dni" class="form-control" required="required" autocomplete="off" onkeypress="if(this.value.length==11) return false;">
+
+                            <div  class="col-xs-12" style="padding: 0.15em .5em;">
+                            <label>COLOR DE CILINDRO:</label>
+                            <select name="color" class="form-control" required="required">
+                            <option>Verde</option>
+                            <option>Plomo</option>
+                            <option>Amarillo</option>
+                            </select>
                             </div>
-                            <div class="col-lg-2 col-xs-12" style="padding: 0.15em .5em;">
-                                    <label>EDAD:</label>
-                                   <!-- <select name="edad" id="edad" class="form-control" required="required">-->
-                                    <input type="text" name="edad" id="edad" class="form-control" required="required" autocomplete="off">
+
+                            <div  class="col-xs-12" style="padding: 0.15em .5em;">
+                            <label>CONTENIDO:</label>
+                            <select name="contenido" class="form-control" required="required">
+                            <option>Oxigeno</option>
+                            <option>Nitrogeno</option>
+                            <option>Co2</option>
+                            </select>
+                            </div>
+
+                            <div class="col-lg-12 col-xs-12" style="padding: 0.15em .5em;">
+                                    <label>CONCENTRACION:</label>
+                                    <input type="text" name="concentracion" id="concentracion" class="form-control" required="required" autocomplete="off">
                             </div>
                             <br>
+            
+                            <div  class="col-xs-12" style="padding: 0.15em .5em;">
+                            <label>ESTADO DE CILINDRO:</label>
+                            <select name="estado" class="form-control" required="required">
+                            <option>Bueno</option>
+                            <option>Malo</option>
+                            <option>Critico</option>
+                            </select>
+                            </div>
+
+                            <br>
+                            <label style="margin-top: 0.5em; color: #1919A3;">CAPACIDAD DE CILINDROS:</label>
+                        	<br>
+
+                            <div class="form-group" style="margin-bottom: 0 !important;">
+                            <div class="col-lg-4 col-xs-12" style="padding: 0.15em .5em;"> <!--col-lg-4 -->
+                                    <label>MEDIDAS DE CILINDROS</label>
+                                    <label>          6 Mts3</label>
+                            </div>
+                            <div class="col-lg-4 col-xs-12" style="padding: 0.15em .5em;"> <!--col-lg-4 -->
+                                    <label>STOCK CILINDROS :</label>
+                                    <input type="text" name="stock6" id="stock6" class="form-control" required="required" autocomplete="off" onkeyup="multiplicar()" placeholder="Ingrese Stock">
+                            </div>
                             <div class="col-lg-4 col-xs-12" style="padding: 0.15em .5em;">
-                                    <label>TELÉFONO:</label>
-                                        <input type="number" name="celular" id="celular" class="form-control" required="required" autocomplete="off" onkeypress="if(this.value.length==10) return false;">
+                                    <label>CONTENIDO TOTAL M3 :</label>
+                                    <input type="text" name="total6" id="total6" class="form-control"  autocomplete="off" onkeyup="multiplicar()" readonly="true">
                             </div>
-                            <div class="col-xs-12" style="padding: 0.15em .5em;">
-                                    <label>CORREO ELECTRÓNICO:</label>
-                                    <input type="email" name="correo" id="correo" class="form-control" required="required" autocomplete="off">
-                            </div>
-                            <div class="col-lg-12 col-xs-12" style="padding: 0.15em .5em;">
-                                    <label>DIRECCION:</label>
-                                    <input type="text" name="direccion" id="direccion" class="form-control" required="required" autocomplete="off">
+
+                            <div class="form-group" style="margin-bottom: 0 !important;">
+                            <div class="col-lg-4 col-xs-12" style="padding: 0.15em .5em;"> <!--col-lg-4 -->
+                            <label>          7 Mts3</label>
                             </div>
                             <div class="col-lg-4 col-xs-12" style="padding: 0.15em .5em;">
-                                    <label>DISTRITO:</label>
-                                    <input type="text" name="distrito" id="distrito" class="form-control" required="required" autocomplete="off">
+                                    <input type="text" name="stock7" id="stock7"  class="form-control" required="required" autocomplete="off" onkeyup="multiplicar()" placeholder="Ingrese Stock">
+                            </div>
+                            <div class="col-lg-4 col-xs-12" style="padding: 0.15em .5em;">
+                                    <input type="text" name="total7" id="total7" class="form-control" autocomplete="off" onkeyup="multiplicar()" readonly="true">
                             </div>
 
-							<div class="col-xs-12" style="padding: 0.15em .5em;">
-                                   <label>CONDICION: </label>
-                                   <div class="form-group" style="margin-bottom: 0 !important;">
-                                       <div class="col-xs-12" style="padding: 0.15em .5em;">
-                                            <div class="radio"><label><input type="radio" name="condicion" value="P">Particular.</label></div>
-                                       </div>
-                                       <div class="col-xs-12" style="padding: 0.15em .5em;">
-                                           <div class="radio"><label><input type="radio" name="condicion" value="A">Asegurado</label></div>
-                                       </div>
-                                    </div>
-                              </div>
+                            <div class="form-group" style="margin-bottom: 0 !important;">
+                            <div class="col-lg-4 col-xs-12" style="padding: 0.15em .5em;"> <!--col-lg-4 -->
+                            <label>          8 Mts3</label>
+                            </div>
+                            <div class="col-lg-4 col-xs-12" style="padding: 0.15em .5em;">
+                                    <input type="text" name="stock8" id="stock8"  class="form-control" required="required" autocomplete="off" onkeyup="multiplicar()" placeholder="Ingrese Stock">
+                            </div>
+                            <div class="col-lg-4 col-xs-12" style="padding: 0.15em .5em;">
+                                    <input type="text" name="total8" id="total8" class="form-control" autocomplete="off" onkeyup="multiplicar()" readonly="true">
+                            </div>
+
+                            <div class="form-group" style="margin-bottom: 0 !important;">
+                            <div class="col-lg-4 col-xs-12" style="padding: 0.15em .5em;"> <!--col-lg-4 -->
+                            <label>          9 Mts3</label>
+                            </div>
+                            <div class="col-lg-4 col-xs-12" style="padding: 0.15em .5em;">
+                                    <input type="text" name="stock9" id="stock9"  class="form-control" required="required" autocomplete="off" onkeyup="multiplicar()" placeholder="Ingrese Stock">
+                            </div>
+                            <div class="col-lg-4 col-xs-12" style="padding: 0.15em .5em;">
+                                    <input type="text" name="total9" id="total9" class="form-control" autocomplete="off" onkeyup="multiplicar()" readonly="true">
+                            </div>
+
+                            <div class="form-group" style="margin-bottom: 0 !important;">
+                            <div class="col-lg-4 col-xs-12" style="padding: 0.15em .5em;"> <!--col-lg-4 -->
+                            <label>          10 Mts3</label>
+                            </div>
+                            <div class="col-lg-4 col-xs-12" style="padding: 0.15em .5em;">
+                                    <input type="text" name="stock10" id="stock10" class="form-control" required="required" autocomplete="off" onkeyup="multiplicar()" placeholder="Ingrese Stock">
+                            </div>
+                            <div class="col-lg-4 col-xs-12" style="padding: 0.15em .5em;">
+                                    <input type="text" name="total10" id="total10" class="form-control"  autocomplete="off" onkeyup="multiplicar()" readonly="true">
+                            </div>
+
+                            <div class="form-group" style="margin-bottom: 0 !important;">
+                            <div class="col-lg-4 col-xs-12" style="padding: 0.15em .5em;"> <!--col-lg-4 -->
+                            <label>          Otros Mts3</label>
+                            </div>
+                            <div class="col-lg-4 col-xs-12" style="padding: 0.15em .5em;">
+                                    <input type="text" name="stockotros"  class="form-control" required="required" autocomplete="off" placeholder="Ingrese Stock">
+                            </div>
+                            <div class="col-lg-4 col-xs-12" style="padding: 0.15em .5em;">
+                                    <input type="text" name="totalotros"  class="form-control" required="required" autocomplete="off">
+                            </div>
+
+                            <label>MEDIDOR RED 1:</label>
+                            <br>
+                            <div class="col-lg-2 col-xs-4" style="padding: 0.15em .5em;">
+                                    <input type="text" name="medidor1a" id="medidor1a" class="form-control" autocomplete="off" readonly="true" value="2800" onkeyup="multiplicar()">
+                            </div>
+
+                            <div class="col-lg-3 col-xs-4" style="padding: 0.15em .5em;">
+                                    <input type="text" name="consumo1a" id="consumo1a" class="form-control" required="required" autocomplete="off" placeholder="Ingrese consumo" onkeyup="multiplicar()">
+                            </div>
+                            <div class="col-lg-2 col-xs-4" style="padding: 0.15em .5em;">
+                                    <input type="text" name="total1a" id="total1a" class="form-control" autocomplete="off" onkeyup="multiplicar()" readonly="true">
+                            </div>
+                           <br> 
+                           <br>
+                            <label>MEDIDOR RED 2:</label>
+                            <br>
+                            <div class="col-lg-2 col-xs-4" style="padding: 0.15em .5em;">                                   
+                                    <input type="text" name="medidor2b" id="medidor2b" class="form-control" autocomplete="off" readonly="true" value="2800" onkeyup="multiplicar()">
+                            </div>
+                            <div class="col-lg-3 col-xs-4" style="padding: 0.15em .5em;">                                   
+                                    <input type="text" name="consumo2b" id="consumo2b" class="form-control" required="required" autocomplete="off" placeholder="Ingrese consumo" onkeyup="multiplicar()">
+                            </div>
+                            <div class="col-lg-2 col-xs-4" style="padding: 0.15em .5em;">                                   
+                                    <input type="text" name="total2b" id="total2b" class="form-control" autocomplete="off" onkeyup="multiplicar()" readonly="true">
+                            </div>
+
+                            <div  class="col-xs-12" style="padding: 0.15em .5em;">
+                            <label>RESPONSABLE DE CONTROL:</label>
+                            <select name="contenido" class="form-control" required="required">
+                            <option>GIANCARLO BOSSIO</option>
+                            <option>GISELLA SECLEN</option>
+                            <option>TERESITA VARGAS</option>
+                            </select>
+                            </div>
+
+                            <div  class="col-xs-12" style="padding: 0.15em .5em;">
+                            <label>AREA:</label>
+                            <select name="contenido" class="form-control" required="required">
+                            <option>LOGISTICA</option>
+                            <option>FARMACIA</option>
+                            <option>HOSPITALIZACIÓN</option>
+                            </select>
+                            </div>
 
 
-                                <div class="col-xs-12" style="padding: 0.15em .5em;">
-                                    <label>TIPO DE PACIENTE:</label>
-                                    <div class="form-group" style="margin-bottom: 0 !important;">
-                                        <div class="col-xs-6" style="padding: 0.15em .5em;">
-                                            <div class="radio"><label><input type="radio" name="tipo_paciente" value="N">Nuevo</label></div>
-                                        </div>
-                                        <div class="col-xs-6" style="padding: 0.15em .5em;">
-                                            <div class="radio"><label><input type="radio" name="tipo_paciente" value="C">Continuador</label></div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                               
-                                <div class="col-xs-12" style="padding: 0.15em .5em;">
-                                    <label>DETALLE DE LA SUGERENCIA:</label>
-                                    <input type="textarea" name="motivo" id="motivo" class="form-control" required="required" autocomplete="off">
-                                </div>
                                 <div class="col-lg-4 col-xs-12" style="padding: 0.15em .5em;">
                                 </div>
                             </div>
                         </div>
                         <div>
-                        <div class="col-xs-12" style="padding: 0.15em .5em;">
-                            <label>Nuestras politicas:</label>
-                         <br><br>
-                        <?php 
-                        echo '<a href="https://drive.google.com/file/d/1JJamjf9BHmH9oJVe2xlehytFM4OKcmem/view?usp=sharing" target="_blank">Política de Privacidad</a>';
-                        ?>
-                        <br><br>
-                        <?php 
-                        echo '<a href="https://drive.google.com/file/d/1Dyf42FqNvZ6DCCfwqJs1dFgLrtHFk1rG/view?usp=sharing" target="_blank">Términos y Condiciones</a>';
-                        ?>
-                        <br><br>
-                        </div>
-                        </div>
-                            <div class="col-xs-12" style="margin-top: 1em;">
-                            <div class="col-xs-12" style="padding: 0.15em .5em;">
-                                ¿Autorizas la utilización de tus datos para contactarte?
-                            </div>
 
-                            <div class="col-xs-6" style="padding: 0.15em .5em;">
-                                <div class="radio"><label><input type="radio" name="flagdatos" value="1"><b>SI ACEPTO</b></label></div>
-                            </div>
-                            <div class="col-xs-6" style="padding: 0.15em .5em;">
-                                <div class="radio"><label><input type="radio" name="flagdatos" value="0">NO ACEPTO</label></div>
-                            </div>
-                            <div class="col-xs-12" style="padding: 0.15em .5em;">
-                                ¿Autorizas el tratamiento de sus datos personales?
-                            </div>
-                            <div class="col-xs-6" style="padding: 0.15em .5em;">
-                                <div class="radio"><label><input type="radio" name="flagley" value="1"><b>SI ACEPTO</b></label></div>
-                            </div>
-                            <div class="col-xs-6" style="padding: 0.15em .5em;">
-                                <div class="radio"><label><input type="radio" name="flagley" value="0">NO ACEPTO</label></div>
-                            </div>
                         </div>
                         <div class="col-xs-12" style="margin: 1em 0;">
                             <input type="submit" value="ENVIAR" class="btn btn-large btn-lg btn-block" style="background: #1919A3; color: #fff" name="envia"/>
